@@ -17,7 +17,7 @@ const useWindow = () => {
 
   useEffect(() => {
     console.log("useWindow useEffect called, add listner");
-    // old school javascript
+    // old school javascript, true is needed on window eventlisteners
     window.addEventListener("resize", changeWindowSize, true);
 
     // remove eventListner when component unmounts

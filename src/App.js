@@ -5,6 +5,7 @@ import { useToggle } from "./useToggle";
 import LifeCycleFunc from "./LifeCycleFunc";
 import useWindow from "./useWindow";
 import Size from "./Size";
+import Count from "./Count";
 
 function App() {
   // const [showClass, toggleClass] = useToggle(true);
@@ -26,6 +27,7 @@ function App() {
 
       <div onClick={toggleFunc}>toggle size component</div>
       {showFunc && <Size />}
+      <Count />
     </div>
   );
 }
