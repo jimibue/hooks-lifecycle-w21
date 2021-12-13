@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { useToggle } from "./useToggle";
+import LifeCycleClass from "./LifecycleClass";
 
 function App() {
+  const [showClass, toggleClass] = useToggle(true);
+  const [stateFromApp, setStateFromApp] = useState(0);
+
+  console.log("App component rendering");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div onClick={toggleClass}>toggle class component</div>
+      <button onClick={() => setStateFromApp(Math.random())}>add</button>
+      {showClass && <LifeCycleClass propFromApp={stateFromApp} />}
     </div>
   );
 }
