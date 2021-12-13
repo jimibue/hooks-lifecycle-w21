@@ -26,13 +26,6 @@ const usersReducer = (state, action) => {
       return state;
   }
 };
-currentUsers = [{ id: 1, name: "tony" }];
-let x = usersReducer(currentUsers, {
-  type: "ADD",
-  user: { id: 2, name: "john" },
-});
-
-x;
 
 const Count = () => {
   // const [state, dispatch] = useReducer(reducer, intitState)
